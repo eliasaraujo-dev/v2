@@ -224,7 +224,7 @@ function App() {
             rel="noreferrer"
             className="group inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-teal-200"
           >
-            Ver currículo completo
+            Ver currículo completo.
             <span
               aria-hidden="true"
               className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
