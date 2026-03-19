@@ -285,20 +285,32 @@ function App() {
               </div>
             ))}
           </div>
-          <a
-            href="https://docs.google.com/document/d/1m9toE7DUsexLvyS-_ftuUbRH3bvwLOI23aKc6Ig6Zuw/edit?usp=sharing"
-            target="_blank"
-            rel="noreferrer"
-            className="group inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-teal-200"
-          >
-            Ver currículo completo.
-            <span
-              aria-hidden="true"
-              className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-            >
-              ↗
-            </span>
-          </a>
+          <details className="group w-fit">
+            <summary className="cursor-pointer list-none text-sm font-semibold text-slate-300 transition hover:text-teal-200">
+              Ver currículo completo
+            </summary>
+            <div className="mt-3 ml-4 flex flex-col gap-2">
+              <a
+                href="https://docs.google.com/document/d/1m9toE7DUsexLvyS-_ftuUbRH3bvwLOI23aKc6Ig6Zuw/edit?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-teal-200"
+              >
+                Currículo em Português-BR
+                <span aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                href="https://docs.google.com/document/d/1mql7ztFMyHl7NCDIoo-zC0oi6QXmZPFyF7ME7Pr_YUY/edit?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-teal-200"
+              >
+                Resumé in English
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </details>
         </article>
 
         <article id="projects" className="space-y-5">
