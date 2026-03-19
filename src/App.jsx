@@ -286,7 +286,7 @@ function App() {
             ))}
           </div>
           <a
-            href="https://docs.google.com/document/d/1mql7ztFMyHl7NCDIoo-zC0oi6QXmZPFyF7ME7Pr_YUY/edit?usp=sharing"
+            href="https://docs.google.com/document/d/1m9toE7DUsexLvyS-_ftuUbRH3bvwLOI23aKc6Ig6Zuw/edit?usp=sharing"
             target="_blank"
             rel="noreferrer"
             className="group inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-teal-200"
