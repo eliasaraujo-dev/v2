@@ -2,40 +2,83 @@ import { useEffect } from 'react'
 
 const experience = [
   {
-    period: '2024 — Atual',
-    title: 'Front-end Developer · Studio Aurora',
+    period: '2023 — Atual',
+    title: 'Desenvolvedor de Software Freelancer',
     description:
-      'Construção de interfaces acessíveis com foco em performance e arquitetura de componentes reutilizáveis.',
-    tech: ['React', 'TypeScript', 'Tailwind'],
+      'Desenvolvimento de aplicações web para clientes, com foco em interfaces responsivas, integração com APIs e soluções sob demanda.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Express.js'],
   },
   {
-    period: '2022 — 2024',
-    title: 'UI Developer · Freelance',
+    period: '2015 — 2017',
+    title: 'Militar do Exército Brasileiro',
+    location: 'Centro de Preparação de Oficiais da Reserva · Rio de Janeiro, RJ',
     description:
-      'Criação de landing pages e dashboards para produtos digitais, priorizando UX e animações sutis.',
-    tech: ['React', 'Framer Motion', 'Figma'],
+      'Execução de atividades operacionais e administrativas em ambiente de alta criticidade, com disciplina, resiliência sob pressão e forte capacidade de adaptação.',
+    tech: ['Disciplina Operacional', 'Liderança', 'Trabalho em Equipe'],
   },
 ]
 
 const projects = [
   {
-    name: 'Pulse Analytics',
+    name: 'Cardiora IA – Saúde Preventiva',
     summary:
-      'Painel de métricas para equipes de marketing com visualização de funil e relatórios automatizados.',
-    href: '#',
+      'Sistema de análise preditiva para riscos cardiovasculares com processamento de dados heterogêneos em Python integrado à Google Gemini API, gerando relatórios estruturados e diagnósticos personalizados para suporte à decisão médica.',
+    stack: ['Python', 'Google Gemini API'],
+    status: 'Concluído',
   },
   {
-    name: 'Voyage Booking',
+    name: 'API de Gerenciamento de Usuários',
     summary:
-      'Experiência de reserva para mobile-first com foco em conversão e fluxo simplificado.',
-    href: '#',
+      'API robusta para gerenciamento de identidades em Java com arquitetura RESTful, incluindo rate limiting, cache de alta performance e auditoria de logs para um microsserviço modular, seguro e escalável.',
+    stack: ['Java', 'RESTful Design', 'Rate Limiting', 'Cache', 'Logs'],
+    status: 'Concluído',
   },
   {
-    name: 'Nexa Design System',
+    name: 'Hotel Concierge Chatbot (Hackathon)',
     summary:
-      'Biblioteca de componentes documentada para padronizar interfaces entre múltiplos produtos.',
-    href: '#',
+      'Solução de atendimento 24/7 para redes hoteleiras com interface conversacional responsiva e integração com APIs de reservas e NLP.',
+    stack: ['React', 'Vite', 'Tailwind CSS', 'TypeScript', 'NLP'],
+    status: 'Concluído',
+    href: 'https://github.com/morromakers/group3',
   },
+]
+
+const programs = [
+  {
+    period: '2024',
+    name: 'Hackathon AWS Jam - Universidade Estácio',
+    summary:
+      'Implementação de soluções de arquitetura em nuvem para problemas reais de negócio em competição técnica com tempo limitado.',
+    highlights: [
+      'Desenvolvimento e configuração de serviços AWS em equipe multidisciplinar.',
+      'Comunicação e documentação técnica realizadas em inglês, simulando ambiente global.',
+      'Entrega funcional dentro do prazo, com feedback positivo sobre criatividade e viabilidade técnica.',
+    ],
+  },
+  {
+    period: '2025',
+    name: 'Hackathon Challenge: Hotel Concierge Chatbot - Morro Makers (Ticket Bro)',
+    summary:
+      'Automação de atendimento 24/7 para redes hoteleiras com interface capaz de resolver dúvidas frequentes e reduzir carga da recepção.',
+    href: 'https://github.com/morromakers/group3',
+    highlights: [
+      'Interface conversacional responsiva com React e Vite, estilizada com Tailwind CSS.',
+      'Integração de APIs em TypeScript com sistemas de reservas e motores de NLP.',
+      'Entrega de módulo plug-and-play e multi-tenant para integração em sites externos.',
+    ],
+  },
+]
+
+const techIcons = [
+  { name: 'HTML', icon: 'html5' },
+  { name: 'CSS', icon: 'css' },
+  { name: 'JavaScript', icon: 'javascript' },
+  { name: 'React', icon: 'react' },
+  { name: 'Express.js', icon: 'express' },
+  { name: 'Bootstrap', icon: 'bootstrap' },
+  { name: 'Tailwind CSS', icon: 'tailwindcss' },
+  { name: 'MongoDB', icon: 'mongodb' },
+  { name: 'MySQL', icon: 'mysql' },
 ]
 
 const socials = [
@@ -110,10 +153,10 @@ function App() {
             Elias Araujo
           </h1>
           <h2 className="mt-3 text-lg font-medium text-slate-200">
-            Engenheiro Fullstack
+            Desenvolvedor Fullstack
           </h2>
           <p className="mt-5 max-w-sm leading-relaxed text-slate-400">
-            Crio produtos acessíveis, rápidos e focados em experiência do usuário na web.
+            Crio produtos web acessíveis, rápidos e focados em experiência do usuário.
           </p>
 
           <nav className="mt-12 hidden space-y-4 lg:block" aria-label="Seções">
@@ -128,6 +171,10 @@ function App() {
             <a href="#projects" className="group flex items-center gap-4 uppercase tracking-[0.18em] text-xs font-semibold text-slate-500 hover:text-teal-300">
               <span className="h-px w-8 bg-slate-600 transition-all duration-200 group-hover:w-12 group-hover:bg-teal-300" />
               <span>Projetos</span>
+            </a>
+            <a href="#programs" className="group flex items-center gap-4 uppercase tracking-[0.18em] text-xs font-semibold text-slate-500 hover:text-teal-300">
+              <span className="h-px w-8 bg-slate-600 transition-all duration-200 group-hover:w-12 group-hover:bg-teal-300" />
+              <span>Programas</span>
             </a>
             <a href="#education" className="group flex items-center gap-4 uppercase tracking-[0.18em] text-xs font-semibold text-slate-500 hover:text-teal-300">
               <span className="h-px w-8 bg-slate-600 transition-all duration-200 group-hover:w-12 group-hover:bg-teal-300" />
@@ -185,12 +232,31 @@ function App() {
             Sobre
           </h3>
           <p className="leading-relaxed text-slate-400">
-            Sou desenvolvedor front-end com foco em interfaces limpas, acessíveis e performáticas. Gosto de transformar ideias complexas em experiências simples, mantendo atenção em tipografia, espaçamento e microinterações.
+            Atuo como desenvolvedor fullstack, criando interfaces limpas, acessíveis e performáticas, além de integrar APIs e banco de dados para entregar soluções completas de ponta a ponta.
           </p>
           <p className="leading-relaxed text-slate-400">
-            Atualmente trabalho com React, Tailwind CSS e TypeScript, colaborando com times de produto e design para lançar funcionalidades de alto impacto.
+            Desde 2023, trabalho como freelancer, desenvolvendo soluções web sob demanda.
           </p>
         </article>
+
+        <div className="mx-auto flex w-fit flex-wrap items-center justify-center gap-4 text-slate-500" aria-label="Tecnologias que utilizo">
+          {techIcons.map((tech) => (
+            <span
+              key={tech.name}
+              className="inline-flex p-0.5 transition duration-200 hover:text-teal-300"
+              title={tech.name}
+              aria-label={tech.name}
+            >
+              <img
+                src={`https://cdn.simpleicons.org/${tech.icon}/64748b`}
+                alt={tech.name}
+                className="h-5 w-5 opacity-90 transition duration-200 hover:opacity-100"
+                loading="lazy"
+                decoding="async"
+              />
+            </span>
+          ))}
+        </div>
 
         <article id="experience" className="space-y-5">
           <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-200 lg:hidden">
@@ -204,6 +270,7 @@ function App() {
               >
                 <p className="text-xs uppercase tracking-[0.14em] text-slate-500">{job.period}</p>
                 <h4 className="mt-2 text-base font-semibold text-slate-100">{job.title}</h4>
+                {job.location && <p className="mt-1 text-sm text-slate-500">{job.location}</p>}
                 <p className="mt-2 leading-relaxed text-slate-400">{job.description}</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {job.tech.map((item) => (
@@ -240,14 +307,71 @@ function App() {
           </h3>
           <div className="space-y-4">
             {projects.map((project) => (
-              <a
+              <article
                 key={project.name}
-                href={project.href}
                 className="block rounded-lg border border-transparent bg-transparent p-5 transition hover:border-teal-300/60 hover:bg-slate-900/90 hover:shadow-[0_0_0_1px_rgba(45,212,191,0.2)]"
               >
                 <h4 className="text-base font-semibold text-slate-100">{project.name}</h4>
                 <p className="mt-2 leading-relaxed text-slate-400">{project.summary}</p>
-              </a>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {project.stack.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full bg-teal-300/15 px-3 py-1 text-xs font-medium text-teal-200"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-4 text-sm font-medium text-slate-300">
+                  Status: <span className="text-teal-200">{project.status}</span>
+                </p>
+                {project.href && (
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-teal-200"
+                  >
+                    Ver repositório
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+              </article>
+            ))}
+          </div>
+        </article>
+
+        <article id="programs" className="space-y-5">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-200 lg:hidden">
+            Programas & Hackathon
+          </h3>
+          <div className="space-y-4">
+            {programs.map((program) => (
+              <article
+                key={program.name}
+                className="block rounded-lg border border-transparent bg-transparent p-5 transition hover:border-teal-300/60 hover:bg-slate-900/90 hover:shadow-[0_0_0_1px_rgba(45,212,191,0.2)]"
+              >
+                <p className="text-xs uppercase tracking-[0.14em] text-slate-500">{program.period}</p>
+                <h4 className="mt-2 text-base font-semibold text-slate-100">{program.name}</h4>
+                <p className="mt-2 leading-relaxed text-slate-400">{program.summary}</p>
+                {program.href && (
+                  <a
+                    href={program.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-teal-200"
+                  >
+                    Ver repositório
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+                <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-400">
+                  {program.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+              </article>
             ))}
           </div>
         </article>
