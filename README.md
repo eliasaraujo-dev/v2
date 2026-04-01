@@ -1,16 +1,61 @@
-# React + Vite
+# Portfólio - Elias Araujo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio pessoal construído com React + Vite + Tailwind CSS, com foco em performance, acessibilidade e boa indexação para recrutadores, crawlers e ATS.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite 8
+- Tailwind CSS
+- ESLint
 
-## React Compiler
+## SEO e Indexação
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O projeto foi configurado para melhorar descoberta e leitura por robôs que não executam JavaScript:
 
-## Expanding the ESLint configuration
+- metadados de SEO no HTML base
+- Open Graph e Twitter Cards
+- JSON-LD com schema Person
+- fallback em `noscript`
+- prerender estático no build de produção
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Com isso, o arquivo final `dist/index.html` já sai com o conteúdo do app renderizado dentro de `#root`.
+
+## Scripts
+
+- `npm run dev`: ambiente local com HMR
+- `npm run build`: build completo (cliente + SSR + prerender)
+- `npm run build:client`: build do bundle cliente
+- `npm run build:ssr`: build SSR para geração de HTML estático
+- `npm run prerender`: injeta o HTML renderizado em `dist/index.html`
+- `npm run preview`: sobe preview local da pasta `dist`
+- `npm run lint`: executa lint do projeto
+
+## Como funciona o prerender
+
+1. `vite build` gera os assets do cliente.
+2. `vite build --ssr src/entry-server.jsx --outDir dist/server` gera o bundle SSR.
+3. `scripts/prerender.mjs` importa `dist/server/entry-server.js`, renderiza o app para string e substitui o conteúdo de `#root` em `dist/index.html`.
+4. No cliente, `src/main.jsx` usa `hydrateRoot` quando já existe HTML, preservando interatividade sem re-render completo.
+
+## Estrutura relevante
+
+- `src/App.jsx`: layout e conteúdo do portfólio
+- `src/main.jsx`: bootstrap com hidratação
+- `src/entry-server.jsx`: entry SSR para renderToString
+- `scripts/prerender.mjs`: script de prerender
+- `index.html`: metadados e fallback sem JavaScript
+
+## Execução local
+
+```bash
+npm install
+npm run dev
+```
+
+## Build de produção
+
+```bash
+npm run build
+npm run preview
+```
