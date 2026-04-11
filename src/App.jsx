@@ -397,6 +397,11 @@ function App() {
             <h4 className="mt-2 text-base font-semibold text-slate-100">Tecnólogo em Análise e Desenvolvimento de Sistemas</h4>
             <p className="mt-2 leading-relaxed text-slate-400">Formação com foco em arquitetura de software, engenharia de requisitos e desenvolvimento de aplicações web escaláveis.</p>
           </div>
+          <div className="rounded-lg border border-transparent bg-transparent p-5 transition hover:border-teal-300/60 hover:bg-slate-900/90 hover:shadow-[0_0_0_1px_rgba(45,212,191,0.2)]">
+            <p className="text-xs uppercase tracking-[0.14em] text-slate-500">2026 — Graduado</p>
+            <h4 className="mt-2 text-base font-semibold text-slate-100">Aspire Leaders Program</h4>
+            <p className="mt-2 leading-relaxed text-slate-400">Programa de desenvolvimento acadêmico e profissional para estudantes de baixa renda e primeiros de suas famílias a ingressar no ensino superior, com o apoio de cursos da HarvardX e do corpo docente da Universidade de Harvard. Programa seletivo com candidatos de mais de 100 países. O curso inclui desenvolvimento de habilidades em gerenciamento de projetos e análise de dados.</p>
+          </div>
         </article>
       </section>
     </main>
